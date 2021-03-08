@@ -7,7 +7,20 @@
     <div id="game"></div>
     <script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
     <script type="text/javascript">
+      Crafty.init(500,350, document.getElementById('game'));
       
+      
+      
+      
+      
+      
+      var player = Crafty.e("2D, Twoway, Color, Gravity, Canvas").attr({x: 0, y: 0, w: 100, h: 100}).color("green").gravity("Floor");
+      Crafty.viewport.clampToEntities = false;
+      Crafty.viewport.scale(1.5);
+      Crafty.one("CameraAnimationDone", function() {
+      Crafty.viewport.follow(player, 0, 0);
+      });
+      Crafty.viewport.centerOn(player, 5000);
     </script>
   </body>
 </html>
