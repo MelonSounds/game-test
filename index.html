@@ -4,6 +4,7 @@
     
   </head>
   <body>
+    <h1>Welcome to the game!</h1>
     <div id="game"></div>
     <script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
     <script type="text/javascript">
@@ -15,6 +16,7 @@
       
       
       var player = Crafty.e("2D, Twoway, Color, Gravity, Canvas").attr({x: 0, y: 0, w: 100, h: 100}).color("green").gravity("Floor");
+      
       Crafty.viewport.clampToEntities = false;
       Crafty.viewport.scale(1.5);
       Crafty.one("CameraAnimationDone", function() {
